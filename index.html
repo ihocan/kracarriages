@@ -6,6 +6,7 @@
     <title>KRA Carriages</title>
     <!-- Google AdSense -->
     <script data-ad-client="ca-pub-xxxxxxxx" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         :root {
             --black: #000;
@@ -20,12 +21,6 @@
             font-family: Arial, sans-serif;
             background: var(--beige);
             color: var(--black);
-        }
-        header {
-            background: var(--dark-brown);
-            color: var(--white);
-            text-align: center;
-            padding: 40px 20px;
         }
         header h1 {
             margin: 0 0 10px;
@@ -54,25 +49,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-        #signup {
-            background: var(--burgundy);
-            color: var(--white);
-            text-align: center;
-        }
-        form input[type="email"] {
-            padding: 10px;
-            width: 80%;
-            max-width: 300px;
-            border: none;
-            margin-bottom: 10px;
-        }
-        form button {
-            padding: 10px 20px;
-            background: var(--dark-green);
-            color: var(--white);
-            border: none;
-            cursor: pointer;
-        }
         footer {
             background: var(--dark-brown);
             color: var(--white);
@@ -82,38 +58,45 @@
     </style>
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="Logo" style="max-width:100px;" />
-        <h1>Ride with Elegance</h1>
-        <p>Experience tradition in every journey</p>
+    <header class="text-center py-5" style="background: var(--dark-brown); color: var(--white);">
+        <div class="container">
+            <img src="logo.png" alt="Logo" class="mb-3" style="max-width:100px;" />
+            <h1 class="display-4">Ride with Elegance</h1>
+            <p class="lead">Experience tradition in every journey</p>
+        </div>
     </header>
 
-    <section id="video-section">
-        <video controls autoplay muted loop>
+    <section id="video-section" class="container my-4">
+        <video class="w-100" controls autoplay muted loop>
             <source src="video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </section>
 
-    <section id="what-is-it">
-        <h2>What is it?</h2>
-        <p style="max-width:600px;text-align:center;">Discover our unique horse-drawn carriage service that blends heritage with modern comfort.</p>
-        <img src="photo1.jpg" alt="Carriage view" />
-        <img src="photo2.jpg" alt="Inside carriage" />
-        <img src="photo3.jpg" alt="Carriage ride" />
+    <section id="what-is-it" class="container text-center my-5">
+        <h2 class="mb-4">What is it?</h2>
+        <p class="mx-auto" style="max-width:600px;">Discover our unique horse-drawn carriage service that blends heritage with modern comfort.</p>
+        <img src="photo1.jpg" alt="Carriage view" class="img-fluid mb-3" />
+        <img src="photo2.jpg" alt="Inside carriage" class="img-fluid mb-3" />
+        <img src="photo3.jpg" alt="Carriage ride" class="img-fluid mb-3" />
     </section>
 
-    <section id="signup">
-        <h2>Join the waiting list</h2>
-        <form onsubmit="handleSignup(event)">
-            <input type="email" placeholder="your email" required>
-            <br>
-            <button type="submit">Notify Me</button>
-        </form>
-        <p id="signupMessage"></p>
+    <section id="signup" class="py-5" style="background: var(--burgundy); color: var(--white);">
+        <div class="container text-center">
+            <h2 class="mb-4">Join the waiting list</h2>
+            <form onsubmit="handleSignup(event)" class="row justify-content-center">
+                <div class="col-auto">
+                    <input type="email" class="form-control mb-2" placeholder="your email" required>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-success mb-2">Notify Me</button>
+                </div>
+            </form>
+            <p id="signupMessage"></p>
+        </div>
     </section>
 
-    <footer>
+    <footer class="text-center py-3" style="background: var(--dark-brown); color: var(--white);">
         &copy; 2024 KRA Carriages
     </footer>
 
@@ -139,5 +122,6 @@
             document.getElementById('signupMessage').innerText = 'Thanks for signing up!';
         }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
